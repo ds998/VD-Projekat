@@ -3,7 +3,7 @@
 <title>Početna Stranica</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel = "stylesheet" href = "pocetna.css">
+<link rel = "stylesheet" href = "menu.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -24,7 +24,7 @@ body {font-size:16px;}
   <div class="w3-bar-block">
     <a href="#"  onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Početna</a> 
     
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Usluge</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Usluge</a>
     <div id="accordion">
       <div class="card">
         <div class="arrow_class">
@@ -33,7 +33,7 @@ body {font-size:16px;}
         
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Treninzi</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Treninzi</a>
             <div class="card" id="treninzi">
               <div class="arrow_subclass">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">▼</button>
@@ -41,7 +41,7 @@ body {font-size:16px;}
               
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#treninzi">
                 <div class="card-body">
-                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga</a>
+                  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga</a>
                   <div class="card" id="yoga">
                     <div class="arrow_subclass2">
                       <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">▼</button>
@@ -49,29 +49,67 @@ body {font-size:16px;}
                     
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#yoga">
                       <div class="card-body">
-                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga1</a>
-                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga2</a>
-                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga3</a>
-                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga4</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Power Yoga</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yin Yoga</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hatha Yoga</a>
                       </div>
                     </div>
                   </div>
-                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pilates</a>
-                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Core</a>
-                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cardio</a>
+                  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pilates</a>
+                  <div class="card" id="pilates">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">▼</button>
+                    </div>
+                    
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#pilates">
+                      <div class="card-body">
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Klasični Pilates</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Stot Pilates</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Reformer Pilates</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Core</a>
+                  <div class="card" id="core">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">▼</button>
+                    </div>
+                    
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#core">
+                      <div class="card-body">
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Beginner</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intermediate</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advanced</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cardio</a>
+                  <div class="card" id="cardio">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">▼</button>
+                    </div>
+                    
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#cardio">
+                      <div class="card-body">
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Low Intensity</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Medium Intensity</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">High Intensity</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nutricionista</a> 
-            <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Masaže</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nutricionista</a> 
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Masaže</a>
           </div>
         </div>
     </div>
     
 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Zakazivanje Treninga</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Moj Nalog</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">O nama</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Zakazivanje Treninga</a> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Moj Nalog</a> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">O nama</a>
   </div>
   
 </nav>
