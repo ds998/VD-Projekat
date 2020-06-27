@@ -39,10 +39,24 @@ a:hover {
     flex-direction:column;
     
 }
-.images{
+.w3-light-grey{
+    margin-bottom:30px;
+    width:40%;
+    height:50px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+img{
     max-width:40%;
     max-height:25%;
     margin-top:30px;
     margin-left:auto;
     margin-right:auto;
+}
+
+img:hover{
+    opacity:1;
 }
