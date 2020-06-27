@@ -1,6 +1,4 @@
-.awards_div{
-    padding-top: 50px;
-}
+
 
 #fitnes_pasus{
     padding-top: 50px;
@@ -8,4 +6,8 @@
 
 #kontakt_pasus{
     padding-bottom: 50px;
+}
+
+#awards_paragraph{
+    padding-top: 40px;
 }
