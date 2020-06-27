@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Fitnes Centar - Intermediate</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" href = "menu.css">
+<link rel = "stylesheet" href = "classic.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">x</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Fitnes<br>Centar</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="pocetna.html"  onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Početna</a> 
+    
+    <a href="usluge.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Usluge</a>
+    <div id="accordion">
+      <div class="card">
+        <div class="arrow_class">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">▼</button>
+        </div>
+        
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <a href="treninzi.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Treninzi</a>
+            <div class="card" id="treninzi">
+              <div class="arrow_subclass">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">▼</button>
+              </div>
+              
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#treninzi">
+                <div class="card-body">
+                  <a href="yoga.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga</a>
+                  <div class="card" id="yoga">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">▼</button>
+                    </div>
+                    
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#yoga">
+                      <div class="card-body">
+                        <a href="power.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Power Yoga</a>
+                        <a href="ashtanga.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ashtanga Yoga</a>
+                        <a href="hatha.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hatha Yoga</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="pilates.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pilates</a>
+                  <div class="card" id="pilates">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">▼</button>
+                    </div>
+                    
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#pilates">
+                      <div class="card-body">
+                        <a href="classic.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Klasični Pilates</a>
+                        <a href="stot.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Stot Pilates</a>
+                        <a href="reformer.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Reformer Pilates</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="core.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Core</a>
+                  <div class="card" id="core">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">▼</button>
+                    </div>
+                    
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#core">
+                      <div class="card-body">
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Beginner</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intermediate</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advanced</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="cardio.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cardio</a>
+                  <div class="card" id="cardio">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">▼</button>
+                    </div>
+                    
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#cardio">
+                      <div class="card-body">
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Low Intensity</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Medium Intensity</a>
+                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">High Intensity</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nutricionista</a> 
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Masaže</a>
+          </div>
+        </div>
+    </div>
+    
+
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Zakazivanje Treninga</a> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Moj Nalog</a> 
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">O nama</a>
+  </div>
+  
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Fitnes Centar</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main container" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Intermediate</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  <p class = "opis">Intermediate core je core trening za ljude koji već vežbaju i koji su prošli osnovne vežbe. Cilj je na tome da se pravilno nauče komplikovanije vežbe za core i da se radi većim intenzitetom. Uloga trenera je da učenicima objasni kako pravilno da izvode nove vežbe, kao i da asistira prilikom izvođenja vežbi.</p>
+  <p class = "trajanje">Trajanje treninga: 120 min</p>
+  <p class = "nivo">Nivo težine: 3</p>
+  <div class="w3-row-padding w3-grayscale galerija_slika">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/placeholder.png" alt="John" style="width:100%">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/placeholder.png" alt="Jane" style="width:100%">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/placeholder.png" alt="Mike" style="width:100%">
+        
+      </div>
+    </div>
+  </div>
+  <div class="galerija_videa"></div>
+  <div class="komentari">
+    
+    <div class="row">
+      <div class="col w3-light-grey">
+        <div id = "pret_ocene">Dosadašnja ocena</div>
+        <div id = "pret_komentari">Prethodni komentari</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <p>Ocena:</p>
+    <div class="row">
+      <div class="col-12">
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1">1 star</label>
+        </div>
+      </div>
+    </div>
+    <label for="comment">Komentar:</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">„Copyright 2020, imena autora, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu“.</p></div>
+
+<script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+   
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
