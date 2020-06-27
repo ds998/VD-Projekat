@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Klasični Pilates</title>
+<title>Fitnes Centar - Pilates</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel = "stylesheet" href = "menu.css">
-<link rel = "stylesheet" href = "classic.css">
+<link rel = "stylesheet" href = "usluge.css">
+<link rel="stylesheet" href="Menu.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
 </style>
 <body>
 
 <!-- Sidebar/menu -->
-<!--DODATI MENU.css-->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">x</a>
   <div class="w3-container">
@@ -126,67 +123,34 @@ body {font-size:16px;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main container" style="margin-left:340px;margin-right:40px">
+<div class="w3-main" style="margin-left:340px;margin-right:40px;">
 
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Klasični Pilates.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Pilates</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
-  <p class = "opis">Kroz seriju preciznih, kontrolisanih pokreta razvija sve mišićne grupe u telu, poboljšavajući držanje i fleksibilost. Takodje, pilates je jedan od najboljih treninga za um, rešava se stresa kroz vežbe disanja što je jedan od glavnih principa klasičnog pilatesa.</p>
-  <p class = "trajanje">Trajanje treninga: 60 min</p>
-  <p class = "nivo">Nivo težine: 3</p>
-  <div class="w3-row-padding w3-grayscale galerija_slika">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="John" style="width:100%">
-        
+    <div class="image-wrapper">
+      
+      <a class ="a_img" href="treninzi.html"><img src="assets/placeholder.png"></a>
+      <div class="new_grey">
+        <div class="w3-container">
+          <h3>Klasični</h3>
+        </div>
       </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="Jane" style="width:100%">
-        
+      <a class ="a_img" href="nutricionista.html"><img src="assets/placeholder.png"></a>
+      <div class="new_grey">
+        <div class="w3-container">
+          <h3>Stot</h3>
+        </div>
       </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="Mike" style="width:100%">
-        
-      </div>
-    </div>
-  </div>
-  <div class="galerija_videa"></div>
-  <div class="komentari">
-    
-    <div class="row">
-      <div class="col w3-light-grey">
-        <div id = "pret_ocene">Dosadasnja ocena</div>
-        <div id = "pret_komentari">Prethodni komentari</div>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <p>Ocena:</p>
-    <div class="row">
-      <div class="col-12">
-        <div class="rate">
-          <input type="radio" id="star5" name="rate" value="5" />
-          <label for="star5">5 stars</label>
-          <input type="radio" id="star4" name="rate" value="4" />
-          <label for="star4">4 stars</label>
-          <input type="radio" id="star3" name="rate" value="3" />
-          <label for="star3">3 stars</label>
-          <input type="radio" id="star2" name="rate" value="2" />
-          <label for="star2">2 stars</label>
-          <input type="radio" id="star1" name="rate" value="1" />
-          <label for="star1">1 star</label>
+      <a class ="a_img" href="masaže.html"><img src="assets/placeholder.png"></a>
+      <div class="new_grey">
+        <div class="w3-container">
+          <h3>Reformer</h3>
         </div>
       </div>
     </div>
-    <label for="comment">Komentar:</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
   </div>
 
 <!-- End page content -->
@@ -205,14 +169,6 @@ body {font-size:16px;}
   function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
-  }
-  
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
   }
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

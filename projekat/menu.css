@@ -59,3 +59,16 @@ nav::-webkit-scrollbar-thumb {
     background: #d31c0f !important;
     border-radius: 10px !important;
 }
+
+body::-webkit-scrollbar {
+    width: 10px !important;
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: #d3d2d2 !important;
+    border-radius: 10px !important;
+}
