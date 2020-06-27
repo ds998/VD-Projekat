@@ -24,15 +24,44 @@ body {font-size:16px;}
   <div class="w3-bar-block">
     <a href="#"  onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Početna</a> 
     
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Usluge</a>
     <div id="accordion">
       <div class="card">
-        <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Usluge</a>
-        <button class="btn btn-link arrow_class" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">▼</button>
+        <div class="arrow_class">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">▼</button>
+        </div>
         
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
             <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Treninzi</a>
-            
+            <div class="card" id="treninzi">
+              <div class="arrow_subclass">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">▼</button>
+              </div>
+              
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#treninzi">
+                <div class="card-body">
+                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga</a>
+                  <div class="card" id="yoga">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">▼</button>
+                    </div>
+                    
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#yoga">
+                      <div class="card-body">
+                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga1</a>
+                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga2</a>
+                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga3</a>
+                        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga4</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pilates</a>
+                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Core</a>
+                  <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cardio</a>
+                </div>
+              </div>
+            </div>
             <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nutricionista</a> 
             <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Masaže</a>
           </div>

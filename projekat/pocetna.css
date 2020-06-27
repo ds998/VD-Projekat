@@ -34,3 +34,28 @@ a:hover {
     text-decoration: none !important;
     border: none !important;
 }
+
+.arrow_class {
+    padding-left: 6%;
+}
+
+.arrow_subclass {
+    padding-left: 7%;
+}
+
+.arrow_subclass2{
+    padding-left: 8%;
+}
+
+nav::-webkit-scrollbar {
+    width: 10px !important;
+}
+  
+nav::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+  
+nav::-webkit-scrollbar-thumb {
+    background: #d31c0f !important;
+    border-radius: 10px !important;
+}
