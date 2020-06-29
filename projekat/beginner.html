@@ -167,7 +167,7 @@ body {font-size:16px;}
     </div>
   </div>
   <div class="form-group">
-    <form name="comment_form" type="POST" onsubmit="submit_opinion()">
+    <form name="comment_form" method="POST" onsubmit="submit_opinion()">
     <p>Ocena:</p>
     <div class="row">
       <div class="col-12">
@@ -187,7 +187,8 @@ body {font-size:16px;}
     </div>
     <label for="comment">Komentar:</label>
     <textarea name="comment" class="form-control" rows="5" id="comment"></textarea>
-     </form>
+    <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Dodajte ocenu i/ili komentar</button>
+    </form>
   </div>
 
 <!-- End page content -->
@@ -195,7 +196,9 @@ body {font-size:16px;}
 
 <!-- W3.CSS Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">„Copyright 2020, imena autora, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu“.</p></div>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script>
   // Script to open and close sidebar
   function w3_open() {
@@ -215,21 +218,56 @@ body {font-size:16px;}
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
   }
+   
+  $(document).ready(function(){
+    var zakazivanja=JSON.parse(localStorage.getItem('zakazivanja'));
+    if(zakazivanja["beginner"].prisustvovano){
+      $(".form-group").css('display','block');
+    }
+    //console.log(JSON.parse(localStorage.getItem("treninzi")));
+  });
 
+  $(document).ready(function(){
+    let podaci=JSON.parse(localStorage.getItem("treninzi"))["beginner"];
+    if(podaci.broj_ocena==0){
+      $("#pret_ocene").html("Dosadašnja ocena: neocenjeno");
+    }else{
+      $("#pret_ocene").html("Dosadašnja ocena: "+podaci.ocena);
+    }
+    let htm="";
+    if(podaci.comments.length!=0)htm+="</br>";
+    for(let i=0;i<podaci.comments.length;i++){
+      htm+=podaci.comments[i]+"</br>";
+    }
+    $("#pret_komentari").html("Prethodni komentari:"+htm);
+
+  });
   function submit_opinion(){
-    var trainings=JSON.parse(localStorage.getItem("trainings"));
-    var beginner=trainings.beginner;
-    var oc=document.comment_form.value;
-    beginner.ocena=(beginner.ocena*beginner.broj_ocena+oc)/(beginner.broj_ocena+1);
-    beginner.broj_ocena+=1;
-    beginner.comments.push(document.comment_form.comment.value);
-    trainings.beginner=beginner;
-    localStorage.setItem("trainings",JSON.stringify(trainings));
+    var trainings=JSON.parse(localStorage.getItem("treninzi"));
+    var beginner=trainings["beginner"];
+    var oc=parseInt(document.comment_form.rate.value);
+    console.log(oc);
+    if(oc!=NaN){
+      console.log(beginner.ocena*beginner.broj_ocena+oc);
+      beginner.ocena=((beginner.ocena*beginner.broj_ocena)+oc)/(beginner.broj_ocena+1);
+      console.log(beginner.ocena);
+      beginner.broj_ocena+=1;
+      document.getElementById("pret_ocene").innerHTML="Dosadašnja ocena: "+beginner.ocena;
+    }
+    
+    if(document.comment_form.comment.value){
+      beginner.comments.push(document.comment_form.comment.value);
+      document.getElementById("pret_komentari").innerHTML+=document.comment_form.comment.value+"</br>";
+    }
+    trainings["beginner"]=beginner;
+    
+    
+    localStorage.setItem("treninzi",JSON.stringify(trainings));
+    console.log(JSON.parse(localStorage.getItem("treninzi")));
+    return false;
     
   }
   </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
 </body>
 </html>

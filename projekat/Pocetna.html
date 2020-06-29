@@ -139,28 +139,72 @@ body {font-size:16px;}
 <!-- W3.CSS Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">„Copyright 2020, imena autora, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu“.</p></div>
 
-<script>
-  // Script to open and close sidebar
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-  }
-   
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
-  
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
-  </script>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+  
+    $(document).ready(function(){
+      //localStorage.removeItem('zakazivanja');
+
+
+      if(localStorage.getItem('treninzi')==null){
+        var treninzi={};
+        treninzi["beginner"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["intermediate"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["advanced"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["low_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["medium_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["high_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["power"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["ashtanga"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["hatha"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["classic"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["stot"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["reformer"]={ocena:0.0,broj_ocena:0,comments:[]};
+        localStorage.setItem('treninzi',JSON.stringify(treninzi));
+      }
+
+      if(localStorage.getItem('zakazivanja')==null){
+        var zakazivanja={};
+        zakazivanja["beginner"]={datum:null,prisustvovano:0};
+        zakazivanja["intermediate"]={datum:null,prisustvovano:0};
+        zakazivanja["advanced"]={datum:null,prisustvovano:0};
+        zakazivanja["low_intensity"]={datum:null,prisustvovano:0};
+        zakazivanja["medium_intensity"]={datum:null,prisustvovano:0};
+        zakazivanja["high_intensity"]={datum:null,prisustvovano:0};
+        zakazivanja["power"]={datum:null,prisustvovano:0};
+        zakazivanja["ashtanga"]={datum:null,prisustvovano:0};
+        zakazivanja["hatha"]={datum:null,prisustvovano:0};
+        zakazivanja["classic"]={datum:null,prisustvovano:0};
+        zakazivanja["stot"]={datum:null,prisustvovano:0};
+        zakazivanja["reformer"]={datum:null,prisustvovano:0};
+        localStorage.setItem('zakazivanja',JSON.stringify(zakazivanja));
+      }
+
+      let tre=JSON.parse(localStorage.getItem('treninzi'));
+      console.log(tre);
+      
+    });
+    </script>
 </body>
 </html>
