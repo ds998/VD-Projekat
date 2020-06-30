@@ -194,6 +194,15 @@ body {font-size:16px;}
 
        $(".nalog").html(str);
     }
+
+    function cancel(s){
+        let zak=JSON.parse(localStorage.getItem('zakazivanja'));
+        if(zak[s].datum!=null){
+            zak[s].datum=null;
+            localStorage.setItem('zakazivanja',JSON.stringify(zak));
+        }
+        load_appointments();
+    }
     </script>
 </body>
 </html>

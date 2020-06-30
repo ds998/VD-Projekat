@@ -184,23 +184,23 @@ body {font-size:16px;}
     }
   
     $(document).ready(function(){
-      //localStorage.removeItem('zakazivanja');
+      //localStorage.removeItem('treninzi');
 
 
       if(localStorage.getItem('treninzi')==null){
         var treninzi={};
-        treninzi["beginner"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["intermediate"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["advanced"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["low_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["medium_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["high_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["power"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["ashtanga"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["hatha"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["classic"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["stot"]={ocena:0.0,broj_ocena:0,comments:[]};
-        treninzi["reformer"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["beginner"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["intermediate"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["advanced"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["low_intensity"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["medium_intensity"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["high_intensity"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["power"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["ashtanga"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["hatha"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["classic"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["stot"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
+        treninzi["reformer"]={ocena:0.0,broj_ocena:0,comments:[],broj_prijavljenih:0,mesta:[5,5,5,5,5,5,5]};
         localStorage.setItem('treninzi',JSON.stringify(treninzi));
       }
 
@@ -221,6 +221,8 @@ body {font-size:16px;}
         localStorage.setItem('zakazivanja',JSON.stringify(zakazivanja));
       }
       
+      //console.log(JSON.parse(localStorage.getItem("treninzi")));
+
     });
 
     $(document).ready(function(){
