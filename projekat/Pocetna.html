@@ -186,23 +186,20 @@ body {font-size:16px;}
 
       if(localStorage.getItem('zakazivanja')==null){
         var zakazivanja={};
-        zakazivanja["beginner"]={datum:null,prisustvovano:0};
-        zakazivanja["intermediate"]={datum:null,prisustvovano:0};
-        zakazivanja["advanced"]={datum:null,prisustvovano:0};
-        zakazivanja["low_intensity"]={datum:null,prisustvovano:0};
-        zakazivanja["medium_intensity"]={datum:null,prisustvovano:0};
-        zakazivanja["high_intensity"]={datum:null,prisustvovano:0};
-        zakazivanja["power"]={datum:null,prisustvovano:0};
-        zakazivanja["ashtanga"]={datum:null,prisustvovano:0};
-        zakazivanja["hatha"]={datum:null,prisustvovano:0};
-        zakazivanja["classic"]={datum:null,prisustvovano:0};
-        zakazivanja["stot"]={datum:null,prisustvovano:0};
-        zakazivanja["reformer"]={datum:null,prisustvovano:0};
+        zakazivanja["beginner"]={datum:null,prisustvovano:1};
+        zakazivanja["intermediate"]={datum:null,prisustvovano:1};
+        zakazivanja["advanced"]={datum:null,prisustvovano:1};
+        zakazivanja["low_intensity"]={datum:null,prisustvovano:1};
+        zakazivanja["medium_intensity"]={datum:null,prisustvovano:1};
+        zakazivanja["high_intensity"]={datum:null,prisustvovano:1};
+        zakazivanja["power"]={datum:null,prisustvovano:1};
+        zakazivanja["ashtanga"]={datum:null,prisustvovano:1};
+        zakazivanja["hatha"]={datum:null,prisustvovano:1};
+        zakazivanja["classic"]={datum:null,prisustvovano:1};
+        zakazivanja["stot"]={datum:null,prisustvovano:1};
+        zakazivanja["reformer"]={datum:null,prisustvovano:1};
         localStorage.setItem('zakazivanja',JSON.stringify(zakazivanja));
       }
-
-      let tre=JSON.parse(localStorage.getItem('treninzi'));
-      console.log(tre);
       
     });
     </script>

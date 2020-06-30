@@ -244,27 +244,26 @@ body {font-size:16px;}
   });
   function submit_opinion(){
     var trainings=JSON.parse(localStorage.getItem("treninzi"));
-    var beginner=trainings["beginner"];
-    var oc=parseInt(document.comment_form.rate.value);
-    console.log(oc);
-    if(oc!=NaN){
-      console.log(beginner.ocena*beginner.broj_ocena+oc);
-      beginner.ocena=((beginner.ocena*beginner.broj_ocena)+oc)/(beginner.broj_ocena+1);
-      console.log(beginner.ocena);
-      beginner.broj_ocena+=1;
-      document.getElementById("pret_ocene").innerHTML="Dosadašnja ocena: "+beginner.ocena;
-    }
+      var data=trainings["beginner"];
+      var oc=parseInt(document.comment_form.rate.value);
+      if(!isNaN(oc)){
+        console.log(data.ocena*data.broj_ocena+oc);
+        data.ocena=((data.ocena*data.broj_ocena)+oc)/(data.broj_ocena+1);
+        console.log(data.ocena);
+        data.broj_ocena+=1;
+        document.getElementById("pret_ocene").innerHTML="Dosadašnja ocena: "+data.ocena;
+      }
     
-    if(document.comment_form.comment.value){
-      beginner.comments.push(document.comment_form.comment.value);
-      document.getElementById("pret_komentari").innerHTML+=document.comment_form.comment.value+"</br>";
-    }
-    trainings["beginner"]=beginner;
+      if(document.comment_form.comment.value){
+        data.comments.push(document.comment_form.comment.value);
+        document.getElementById("pret_komentari").innerHTML+=document.comment_form.comment.value+"</br>";
+      }
+      trainings["beginner"]=data;
     
     
-    localStorage.setItem("treninzi",JSON.stringify(trainings));
-    console.log(JSON.parse(localStorage.getItem("treninzi")));
-    return false;
+      localStorage.setItem("treninzi",JSON.stringify(trainings));
+      console.log(JSON.parse(localStorage.getItem("treninzi")));
+      return false;
     
   }
   </script>
