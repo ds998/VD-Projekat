@@ -1,0 +1,72 @@
+.container {
+    overflow: hidden;
+}
+  
+.filterDiv {
+    float: left;
+    background-color: #d31c0f;
+    color: #ffffff;
+    width: 100%;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */
+}
+  
+  /* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+  
+  /* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+  
+/* Add a dark background to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.filter_btn{
+    width: 100%;
+}
+
+.filter_btn:hover{
+    background-color: lightgrey;
+}
+
+.btn_div {
+    padding-top: 100px;
+}
+
+.container_filter{
+    height: 400px;
+    overflow: scroll;
+}
+
+.container_filter::-webkit-scrollbar {
+    width: 10px !important;
+}
+  
+.container_filter::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+  
+.container_filter::-webkit-scrollbar-thumb {
+    background: #d3d2d2 !important;
+    border-radius: 10px !important;
+}
+
+.filter_link{
+    color: white;
+    font-size: 17px;
+}
+
+.filter_link:hover {
+    color: rgb(182, 179, 179);
+}

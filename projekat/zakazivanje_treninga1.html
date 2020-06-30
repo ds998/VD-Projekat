@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Fitnes Centar - Klasični Pilates</title>
+<title>Fitnes Centar - Zakazivanje Treninga</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel = "stylesheet" href = "menu.css">
-<link rel = "stylesheet" href = "classic.css">
+<link rel = "stylesheet" href = "zakazivanje_treninga1.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -125,67 +125,45 @@ body {font-size:16px;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main container" style="margin-left:340px;margin-right:40px">
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
 
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Klasični Pilates.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Zakazivanje Treninga.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
-  <p class = "opis">Kroz seriju preciznih, kontrolisanih pokreta razvija sve mišićne grupe u telu, poboljšavajući držanje i fleksibilost. Takodje, pilates je jedan od najboljih treninga za um, rešava se stresa kroz vežbe disanja što je jedan od glavnih principa klasičnog pilatesa.</p>
-  <p class = "trajanje">Trajanje treninga: 60 min</p>
-  <p class = "nivo">Nivo težine: 4</p>
-  <div class="w3-row-padding w3-grayscale galerija_slika">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="John" style="width:100%">
-        
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="Jane" style="width:100%">
-        
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="Mike" style="width:100%">
-        
-      </div>
-    </div>
-  </div>
-  <div class="galerija_videa"></div>
-  <div class="komentari">
-    
+
+  <div class="container-fluid">
     <div class="row">
-      <div class="col w3-light-grey">
-        <div id = "pret_ocene">Dosadasnja ocena</div>
-        <div id = "pret_komentari">Prethodni komentari</div>
+      <div class="col-6 btn_div">
+        <h1 align="center">Filter</h1>
+        <div id="myBtnContainer">
+          <button class="btn active filter_btn" onclick="filterSelection('all')">Prikaži Sve</button>
+          <button class="btn filter_btn" onclick="filterSelection('yoga')">Yoga</button>
+          <button class="btn filter_btn" onclick="filterSelection('pilates')">Pilates</button>
+          <button class="btn filter_btn" onclick="filterSelection('core')">Core</button>
+          <button class="btn filter_btn" onclick="filterSelection('cardio')">Cardio</button>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <p>Ocena:</p>
-    <div class="row">
-      <div class="col-12">
-        <div class="rate">
-          <input type="radio" id="star5" name="rate" value="5" />
-          <label for="star5">5 stars</label>
-          <input type="radio" id="star4" name="rate" value="4" />
-          <label for="star4">4 stars</label>
-          <input type="radio" id="star3" name="rate" value="3" />
-          <label for="star3">3 stars</label>
-          <input type="radio" id="star2" name="rate" value="2" />
-          <label for="star2">2 stars</label>
-          <input type="radio" id="star1" name="rate" value="1" />
-          <label for="star1">1 star</label>
+
+      <div class="col-6">
+        <div class="container_filter">
+          <div class="filterDiv yoga"><a href="#" class = "filter_link">Power Yoga</a></div>
+          <div class="filterDiv cardio"><a href="#" class = "filter_link">Low Intensity</a></div>
+          <div class="filterDiv yoga"><a href="#" class = "filter_link">Ashtanga Yoga</a></div>
+          <div class="filterDiv cardio"><a href="#" class = "filter_link">Medium Intensity</a></div>
+          <div class="filterDiv yoga"><a href="#" class = "filter_link">Hatha Yoga</a></div>
+          <div class="filterDiv cardio"><a href="#" class = "filter_link">High Intensity</a></div>
+          <div class="filterDiv pilates"><a href="#" class = "filter_link">Klasični Pilates</a></div>
+          <div class="filterDiv pilates"><a href="#" class = "filter_link">Stot Pilates</a></div>
+          <div class="filterDiv core"><a href="#" class = "filter_link">Beginner</a></div>
+          <div class="filterDiv pilates"><a href="#" class = "filter_link">Reformer Pilates</a></div>
+          <div class="filterDiv core"><a href="#" class = "filter_link">Intermediate</a></div>
+          <div class="filterDiv core"><a href="#" class = "filter_link">Advanced</a></div>
         </div>
       </div>
     </div>
-    <label for="comment">Komentar:</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
   </div>
 
 <!-- End page content -->
@@ -217,5 +195,6 @@ body {font-size:16px;}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src = "zakazivanje_treninga1.js"></script>
 </body>
 </html>
