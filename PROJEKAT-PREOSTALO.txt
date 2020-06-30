@@ -1,0 +1,8 @@
+1. zakazivanje treninga
+2. dodavanje za sortiranje u okviru grupe treninga
+3. proveriti da li je zakazivanje treninga dobro povezano sa nalogom
+4. provera za ocene i komentare i onda provera za pocetnu stranicu za tri najbolja treninga
+5. povezati sve u meniju i proveriti da li su omoguceni svi nacini dosezanja svih stranica o zahtevima zadatka
+6. dodavanje banera, breadcrumbs, slika i video galerije, engleski
+7. konacna provera
+8. proveriti u svim veb pretrazivacima
