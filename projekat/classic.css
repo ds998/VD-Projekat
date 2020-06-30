@@ -39,6 +39,7 @@
 
 .form-group{
     padding-top: 50px;
+    display:none;
 }
 
 .galerija_slika{
@@ -48,4 +49,8 @@
 
 .opis{
     padding-top: 30px;
+}
+
+#comment{
+    margin-bottom:20px;
 }

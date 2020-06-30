@@ -133,34 +133,122 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
 
+  <div class="tekst">Dobrodošli! Nudimo vam veliki broj opcija za različite vrste treninga, kao i mogućnost pregleda kod nutricioniste ili zakazivanja sesije masaže.</div>
+  <div class="w3-row-padding w3-grayscale" style="padding-top: 30px !important;
+  padding-bottom: 30px !important;">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey" id="first">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey" id="second">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey" id="third">
+        
+      </div>
+    </div>
+  </div>
+
 <!-- End page content -->
 </div>
 
 <!-- W3.CSS Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">„Copyright 2020, imena autora, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu“.</p></div>
 
-<script>
-  // Script to open and close sidebar
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-  }
-   
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
-  
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
-  </script>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+  
+    $(document).ready(function(){
+      //localStorage.removeItem('zakazivanja');
+
+
+      if(localStorage.getItem('treninzi')==null){
+        var treninzi={};
+        treninzi["beginner"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["intermediate"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["advanced"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["low_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["medium_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["high_intensity"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["power"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["ashtanga"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["hatha"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["classic"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["stot"]={ocena:0.0,broj_ocena:0,comments:[]};
+        treninzi["reformer"]={ocena:0.0,broj_ocena:0,comments:[]};
+        localStorage.setItem('treninzi',JSON.stringify(treninzi));
+      }
+
+      if(localStorage.getItem('zakazivanja')==null){
+        var zakazivanja={};
+        zakazivanja["beginner"]={datum:null,prisustvovano:1};
+        zakazivanja["intermediate"]={datum:null,prisustvovano:1};
+        zakazivanja["advanced"]={datum:null,prisustvovano:1};
+        zakazivanja["low_intensity"]={datum:null,prisustvovano:1};
+        zakazivanja["medium_intensity"]={datum:null,prisustvovano:1};
+        zakazivanja["high_intensity"]={datum:null,prisustvovano:1};
+        zakazivanja["power"]={datum:null,prisustvovano:1};
+        zakazivanja["ashtanga"]={datum:null,prisustvovano:1};
+        zakazivanja["hatha"]={datum:null,prisustvovano:1};
+        zakazivanja["classic"]={datum:null,prisustvovano:1};
+        zakazivanja["stot"]={datum:null,prisustvovano:1};
+        zakazivanja["reformer"]={datum:null,prisustvovano:1};
+        localStorage.setItem('zakazivanja',JSON.stringify(zakazivanja));
+      }
+      
+    });
+
+    $(document).ready(function(){
+        let arr=[];
+        arr[0]="ashtanga";
+        arr[1]="beginner";
+        arr[2]="classic";
+
+        let grade_arr=[0.0,0.0,0.0];
+
+        let name_arr=["beginner","intermediate","advanced","power","ashtanga","hatha","low_intensity","medium_intensity","high_intensity","classic","stot","reformer"];
+        let display_arr=["Beginner","Intermediate","Advanced","Power","Ashtanga","Hatha","Low Intensity","Medium Intensity","High Intensity","Klasični","Stot","Reformer"];
+        let tr=JSON.parse(localStorage.getItem("treninzi"));
+        console.log(tr);
+        for(let i=0;i<name_arr.length;i++){
+          let data=tr[name_arr[i]];
+          let ind=grade_arr.indexOf(Math.min(...grade_arr));
+          if(data.ocena>grade_arr[ind]){
+            grade_arr[ind]=data.ocena;
+            arr[ind]=name_arr[i];
+          }
+        }
+
+      $("#first").html("<a href="+arr[0]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[0])]+"</h3></div></div>");
+      $("#second").html("<a href="+arr[1]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[1])]+"</h3></div></div>");
+      $("#third").html("<a href="+arr[2]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[2])]+"</h3></div></div>");
+
+    });
+    </script>
 </body>
 </html>
