@@ -178,7 +178,8 @@ body {font-size:16px;}
            let data=zak[name_arr[i]];
            if(data.datum!=null){
                let trenutni_datum=new Date();
-               let diff=data.datum-trenutni_datum;
+               let nas_datum = new Date(data.datum);
+               let diff=nas_datum.getTime()-trenutni_datum.getTime();
                diff=Math.floor(diff/1000/60);
                console.log(data.datum);
                if(diff>0){
@@ -186,7 +187,7 @@ body {font-size:16px;}
                       str+="<hr>"+display_arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;"+data.datum;
                    }
                    else{
-                     str+="<hr>"+display_arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;"+data.datum+"&nbsp;&nbsp;&nbsp;&nbsp;"+"<button type='submit' class='w3-button w3-block w3-padding-large w3-red w3-margin-bottom' onclick='cancel("+name_arr[i]+")'>Otkažite</button>";
+                     str+="<hr>"+display_arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;"+data.datum+"&nbsp;&nbsp;&nbsp;&nbsp;"+"<button type='submit' class='w3-button w3-block w3-padding-large w3-red w3-margin-bottom' onclick='cancel("+'"'+name_arr[i]+'"'+")'>Otkažite</button>";
                    }
                }
                
@@ -200,7 +201,8 @@ body {font-size:16px;}
       let zak=JSON.parse(localStorage.getItem('zakazivanja'));
       let tre = JSON.parse(localStorage.getItem('treninzi'));
       if(zak[s].datum!=null){
-        let d = zak[s].datum.getDay();
+        console.log(s);
+        let d = new Date(zak[s].datum).getDay();
         zak[s].datum=null;
         tre[s].broj_prijavljenih--;
         tre[s].mesta[d]++;
