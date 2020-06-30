@@ -56,7 +56,7 @@ nav::-webkit-scrollbar-track {
 }
   
 nav::-webkit-scrollbar-thumb {
-    background: #d31c0f !important;
+    background: rgb(4, 77, 4) !important;
     border-radius: 10px !important;
 }
 
