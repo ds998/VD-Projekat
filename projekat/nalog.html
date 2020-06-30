@@ -180,6 +180,7 @@ body {font-size:16px;}
                let trenutni_datum=new Date();
                let diff=data.datum-trenutni_datum;
                diff=Math.floor(diff/1000/60);
+               console.log(data.datum);
                if(diff>0){
                    if(diff<30){
                       str+="<hr>"+display_arr[i]+"&nbsp;&nbsp;&nbsp;&nbsp;"+data.datum;
@@ -196,12 +197,17 @@ body {font-size:16px;}
     }
 
     function cancel(s){
-        let zak=JSON.parse(localStorage.getItem('zakazivanja'));
-        if(zak[s].datum!=null){
-            zak[s].datum=null;
-            localStorage.setItem('zakazivanja',JSON.stringify(zak));
-        }
-        load_appointments();
+      let zak=JSON.parse(localStorage.getItem('zakazivanja'));
+      let tre = JSON.parse(localStorage.getItem('treninzi'));
+      if(zak[s].datum!=null){
+        let d = zak[s].datum.getDay();
+        zak[s].datum=null;
+        tre[s].broj_prijavljenih--;
+        tre[s].mesta[d]++;
+        localStorage.setItem('zakazivanja',JSON.stringify(zak));
+        localStorage.setItem('treninzi',JSON.stringify(tre));
+      }
+      load_appointments();
     }
     </script>
 </body>

@@ -149,18 +149,18 @@ body {font-size:16px;}
 
       <div class="col-6">
         <div class="container_filter">
-          <div class="filterDiv yoga"><a href="#" class = "filter_link">Power Yoga</a></div>
-          <div class="filterDiv cardio"><a href="#" class = "filter_link">Low Intensity</a></div>
-          <div class="filterDiv yoga"><a href="#" class = "filter_link">Ashtanga Yoga</a></div>
-          <div class="filterDiv cardio"><a href="#" class = "filter_link">Medium Intensity</a></div>
-          <div class="filterDiv yoga"><a href="#" class = "filter_link">Hatha Yoga</a></div>
-          <div class="filterDiv cardio"><a href="#" class = "filter_link">High Intensity</a></div>
-          <div class="filterDiv pilates"><a href="#" class = "filter_link">Klasični Pilates</a></div>
-          <div class="filterDiv pilates"><a href="#" class = "filter_link">Stot Pilates</a></div>
-          <div class="filterDiv core"><a href="#" class = "filter_link">Beginner</a></div>
-          <div class="filterDiv pilates"><a href="#" class = "filter_link">Reformer Pilates</a></div>
-          <div class="filterDiv core"><a href="#" class = "filter_link">Intermediate</a></div>
-          <div class="filterDiv core"><a href="#" class = "filter_link">Advanced</a></div>
+          <div class="filterDiv yoga"><p class = "filter_link" onclick="appoint('power')">Power Yoga</p></div>
+          <div class="filterDiv cardio"><p class = "filter_link" onclick="appoint('low_intensity')">Low Intensity</p></div>
+          <div class="filterDiv yoga"><p class = "filter_link" onclick="appoint('ashtanga')">Ashtanga Yoga</p></div>
+          <div class="filterDiv cardio"><p class = "filter_link" onclick="appoint('medium_intensity')">Medium Intensity</p></div>
+          <div class="filterDiv yoga"><p class = "filter_link" onclick="appoint('hatha')">Hatha Yoga</p></div>
+          <div class="filterDiv cardio"><p class = "filter_link" onclick="appoint('high_intensity')">High Intensity</p></div>
+          <div class="filterDiv pilates"><p class = "filter_link" onclick="appoint('classic')">Klasični Pilates</p></div>
+          <div class="filterDiv pilates"><p class = "filter_link" onclick="appoint('stot')">Stot Pilates</p></div>
+          <div class="filterDiv core"><p class = "filter_link" onclick="appoint('beginner')">Beginner</p></div>
+          <div class="filterDiv pilates"><p class = "filter_link" onclick="appoint('reformer')">Reformer Pilates</p></div>
+          <div class="filterDiv core"><p class = "filter_link" onclick="appoint('intermediate')">Intermediate</p></div>
+          <div class="filterDiv core"><p class = "filter_link" onclick="appoint('advanced')">Advanced</p></div>
         </div>
       </div>
     </div>
@@ -190,6 +190,12 @@ body {font-size:16px;}
     document.getElementById("modal01").style.display = "block";
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
+  }
+
+  function appoint(training_type) {
+    localStorage.setItem('konkretan_trening', training_type);
+    window.open('zakazivanje_treninga2.html','_self');
+    return;
   }
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

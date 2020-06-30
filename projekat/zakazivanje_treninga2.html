@@ -15,7 +15,7 @@ body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
-<body onload = "date_display()">
+<body onload = "func_display()">
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -140,45 +140,45 @@ body {font-size:16px;}
       <table class = "table">
         <tr>
           <td class = "align-middle" id = "day1">Ponedeljak</td>
-          <td class = "align-middle">vreme</td>
-          <td class = "align-middle">mesta</td>
-          <td class = "align-middle"align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
+          <td class = "align-middle">17:00</td>
+          <td class = "align-middle" id = "mesta1">mesta</td>
+          <td class = "align-middle"align="center"><button type="button" class="btn btn-danger" id = "dugme1" onclick="rezervisi('ponedeljak')">Rezerviši</button></td>
         </tr>
         <tr>
           <td class = "align-middle" id = "day2">Utorak</td>
-          <td class = "align-middle">vreme</td>
-          <td class = "align-middle">mesta</td>
-          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
+          <td class = "align-middle">17:00</td>
+          <td class = "align-middle" id = "mesta2">mesta</td>
+          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger" id = "dugme2" onclick="rezervisi('utorak')">Rezerviši</button></td>
         </tr>
         <tr>
           <td class = "align-middle" id = "day3">Sreda</td>
-          <td class = "align-middle">vreme</td>
-          <td class = "align-middle">mesta</td>
-          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
+          <td class = "align-middle">17:00</td>
+          <td class = "align-middle" id = "mesta3">mesta</td>
+          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger" id = "dugme3" onclick="rezervisi('sreda')">Rezerviši</button></td>
         </tr>
         <tr>
           <td class = "align-middle" id = "day4">Četvrtak</td>
-          <td class = "align-middle">vreme</td>
-          <td class = "align-middle">mesta</td>
-          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
+          <td class = "align-middle">17:00</td>
+          <td class = "align-middle" id = "mesta4">mesta</td>
+          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger" id = "dugme4" onclick="rezervisi('cetvrtak')">Rezerviši</button></td>
         </tr>
         <tr>
           <td class = "align-middle" id = "day5">Petak</td>
-          <td class = "align-middle">vreme</td>
-          <td class = "align-middle">mesta</td>
-          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
+          <td class = "align-middle">17:00</td>
+          <td class = "align-middle" id = "mesta5">mesta</td>
+          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger" id = "dugme5" onclick="rezervisi('petak')">Rezerviši</button></td>
         </tr>
         <tr>
           <td class = "align-middle" id = "day6">Subota</td>
-          <td class = "align-middle">vreme</td>
-          <td class = "align-middle">mesta</td>
-          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
+          <td class = "align-middle">17:00</td>
+          <td class = "align-middle" id = "mesta6">mesta</td>
+          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger" id = "dugme6" onclick="rezervisi('subota')">Rezerviši</button></td>
         </tr>
         <tr>
           <td class = "align-middle" id = "day7">Nedelja</td>
-          <td class = "align-middle">vreme</td>
-          <td class = "align-middle">mesta</td>
-          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
+          <td class = "align-middle">17:00</td>
+          <td class = "align-middle" id = "mesta7">mesta</td>
+          <td class = "align-middle" align="center"><button type="button" class="btn btn-danger" id = "dugme7" onclick="rezervisi('nedelja')">Rezerviši</button></td>
         </tr>
       </table>
     </div>
@@ -211,28 +211,51 @@ body {font-size:16px;}
     captionText.innerHTML = element.alt;
   }
 
-  function date_display(){
-    var d1 = new Date();
-    d1.setUTCHours(12);
-    d1.setUTCMinutes(15);
-    var d2 = new Date(d1);
-    d2.setUTCHours(13);
-    d2.setUTCMinutes(30);
-    var d3 = new Date(d2);
-    d3.setUTCHours(14);
-    d3.setUTCMinutes(45);
-    var d4 = new Date(d3);
-    d4.setUTCHours(15);
-    d4.setUTCMinutes(15);
-    var d5 = new Date(d4);
-    d5.setUTCHours(16);
-    d5.setUTCMinutes(30);
-    var d6 = new Date(d5);
-    d6.setUTCHours(17);
-    d6.setUTCMinutes(45);
-    var d7 = new Date(d6);
-    d7.setUTCHours(18);
-    d7.setUTCMinutes(15);
+  function func_display(){
+    var trening = JSON.parse(localStorage.getItem('treninzi'));
+    var ime = localStorage.getItem('konkretan_trening');
+    var podaci = trening[ime];
+    var nedeljni_niz = podaci.mesta;
+    for (let i = 0; i < 7; i++){
+      if(nedeljni_niz[i] < 1) {
+        var ime_dugmeta = "dugme"+(i+1);
+        console.log(ime_dugmeta);
+        document.getElementById(ime_dugmeta).style.display="none";
+      }
+    }
+    document.getElementById('mesta1').innerHTML = nedeljni_niz[0];
+    document.getElementById('mesta2').innerHTML = nedeljni_niz[1];
+    document.getElementById('mesta3').innerHTML = nedeljni_niz[2];
+    document.getElementById('mesta4').innerHTML = nedeljni_niz[3];
+    document.getElementById('mesta5').innerHTML = nedeljni_niz[4];
+    document.getElementById('mesta6').innerHTML = nedeljni_niz[5];
+    document.getElementById('mesta7').innerHTML = nedeljni_niz[6];
+  }
+
+  function rezervisi(dan){
+    var niz_dana = ['ponedeljak','utorak','sreda','cetvrtak','petak','subota','nedelja'];
+    var trening = JSON.parse(localStorage.getItem('treninzi'));
+    var ime = localStorage.getItem('konkretan_trening');
+    var podaci = trening[ime];
+    var nedeljni_niz = podaci.mesta;
+    var zakazivanje = JSON.parse(localStorage.getItem('zakazivanja'));
+    var appointment = zakazivanje[ime];
+    var termin = new Date();
+    while(termin.getDay()!=niz_dana.indexOf(dan)){
+      termin.setDate(termin.getDate() + 1);
+    }
+    termin.setHours(17);
+    termin.setMinutes(0);
+    termin.setSeconds(0);
+    appointment.datum = termin;
+    nedeljni_niz[niz_dana.indexOf(dan)]--;
+    podaci.mesta = nedeljni_niz;
+    podaci.broj_prijavljenih++;
+    trening[ime] = podaci;
+    localStorage.setItem('treninzi',JSON.stringify(trening));
+    zakazivanje[ime] = appointment;
+    localStorage.setItem('zakazivanja',JSON.stringify(zakazivanje));
+    func_display();
   }
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

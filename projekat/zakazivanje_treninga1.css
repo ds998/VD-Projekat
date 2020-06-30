@@ -69,4 +69,5 @@
 
 .filter_link:hover {
     color: rgb(182, 179, 179);
+    cursor: pointer;
 }
