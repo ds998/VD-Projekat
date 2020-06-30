@@ -15,7 +15,7 @@ body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
-<body>
+<body onload = "date_display()">
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -139,43 +139,43 @@ body {font-size:16px;}
     <div class="col-12 table_col">
       <table class = "table">
         <tr>
-          <td class = "align-middle">dan1</td>
+          <td class = "align-middle" id = "day1">Ponedeljak</td>
           <td class = "align-middle">vreme</td>
           <td class = "align-middle">mesta</td>
           <td class = "align-middle"align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
         </tr>
         <tr>
-          <td class = "align-middle">dan2</td>
+          <td class = "align-middle" id = "day2">Utorak</td>
           <td class = "align-middle">vreme</td>
           <td class = "align-middle">mesta</td>
           <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
         </tr>
         <tr>
-          <td class = "align-middle">dan3</td>
+          <td class = "align-middle" id = "day3">Sreda</td>
           <td class = "align-middle">vreme</td>
           <td class = "align-middle">mesta</td>
           <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
         </tr>
         <tr>
-          <td class = "align-middle">dan4</td>
+          <td class = "align-middle" id = "day4">Četvrtak</td>
           <td class = "align-middle">vreme</td>
           <td class = "align-middle">mesta</td>
           <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
         </tr>
         <tr>
-          <td class = "align-middle">dan5</td>
+          <td class = "align-middle" id = "day5">Petak</td>
           <td class = "align-middle">vreme</td>
           <td class = "align-middle">mesta</td>
           <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
         </tr>
         <tr>
-          <td class = "align-middle">dan6</td>
+          <td class = "align-middle" id = "day6">Subota</td>
           <td class = "align-middle">vreme</td>
           <td class = "align-middle">mesta</td>
           <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
         </tr>
         <tr>
-          <td class = "align-middle">dan7</td>
+          <td class = "align-middle" id = "day7">Nedelja</td>
           <td class = "align-middle">vreme</td>
           <td class = "align-middle">mesta</td>
           <td class = "align-middle" align="center"><button type="button" class="btn btn-danger">Rezerviši</button></td>
@@ -209,6 +209,30 @@ body {font-size:16px;}
     document.getElementById("modal01").style.display = "block";
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
+  }
+
+  function date_display(){
+    var d1 = new Date();
+    d1.setUTCHours(12);
+    d1.setUTCMinutes(15);
+    var d2 = new Date(d1);
+    d2.setUTCHours(13);
+    d2.setUTCMinutes(30);
+    var d3 = new Date(d2);
+    d3.setUTCHours(14);
+    d3.setUTCMinutes(45);
+    var d4 = new Date(d3);
+    d4.setUTCHours(15);
+    d4.setUTCMinutes(15);
+    var d5 = new Date(d4);
+    d5.setUTCHours(16);
+    d5.setUTCMinutes(30);
+    var d6 = new Date(d5);
+    d6.setUTCHours(17);
+    d6.setUTCMinutes(45);
+    var d7 = new Date(d6);
+    d7.setUTCHours(18);
+    d7.setUTCMinutes(15);
   }
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
