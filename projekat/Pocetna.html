@@ -133,6 +133,26 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
 
+  <div class="tekst">Dobrodošli! Nudimo vam veliki broj opcija za različite vrste treninga, kao i mogućnost pregleda kod nutricioniste ili zakazivanja sesije masaže.</div>
+  <div class="w3-row-padding w3-grayscale" style="padding-top: 30px !important;
+  padding-bottom: 30px !important;">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey" id="first">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey" id="second">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey" id="third">
+        
+      </div>
+    </div>
+  </div>
+
 <!-- End page content -->
 </div>
 
@@ -201,6 +221,33 @@ body {font-size:16px;}
         localStorage.setItem('zakazivanja',JSON.stringify(zakazivanja));
       }
       
+    });
+
+    $(document).ready(function(){
+        let arr=[];
+        arr[0]="ashtanga";
+        arr[1]="beginner";
+        arr[2]="classic";
+
+        let grade_arr=[0.0,0.0,0.0];
+
+        let name_arr=["beginner","intermediate","advanced","power","ashtanga","hatha","low_intensity","medium_intensity","high_intensity","classic","stot","reformer"];
+        let display_arr=["Beginner","Intermediate","Advanced","Power","Ashtanga","Hatha","Low Intensity","Medium Intensity","High Intensity","Klasični","Stot","Reformer"];
+        let tr=JSON.parse(localStorage.getItem("treninzi"));
+        console.log(tr);
+        for(let i=0;i<name_arr.length;i++){
+          let data=tr[name_arr[i]];
+          let ind=grade_arr.indexOf(Math.min(...grade_arr));
+          if(data.ocena>grade_arr[ind]){
+            grade_arr[ind]=data.ocena;
+            arr[ind]=name_arr[i];
+          }
+        }
+
+      $("#first").html("<a href="+arr[0]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[0])]+"</h3></div></div>");
+      $("#second").html("<a href="+arr[1]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[1])]+"</h3></div></div>");
+      $("#third").html("<a href="+arr[2]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[2])]+"</h3></div></div>");
+
     });
     </script>
 </body>
