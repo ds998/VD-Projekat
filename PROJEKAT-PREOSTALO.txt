@@ -1,10 +1,10 @@
 1. zakazivanje treninga
 2. nalog
 3. dodati proveru da li je ostvareno prisustvo treningu i takodje da li je omoguceno otkazivanje treninga
-3. dodavanje za sortiranje u okviru grupe treninga
-4. proveriti da li je zakazivanje treninga dobro povezano sa nalogom
-5. provera za ocene i komentare i onda provera za pocetnu stranicu za tri najbolja treninga
-6. povezati sve u meniju i proveriti da li su omoguceni svi nacini dosezanja svih stranica o zahtevima zadatka
-7. dodavanje banera, breadcrumbs, slika i video galerije, engleski
-8. konacna provera
-9. proveriti u svim veb pretrazivacima
+4. dodavanje za sortiranje u okviru grupe treninga
+5. proveriti da li je zakazivanje treninga dobro povezano sa nalogom
+6. provera za ocene i komentare i onda provera za pocetnu stranicu za tri najbolja treninga
+7. povezati sve u meniju i proveriti da li su omoguceni svi nacini dosezanja svih stranica o zahtevima zadatka
+8. dodavanje banera, breadcrumbs, slika i video galerije, engleski
+9. konacna provera
+10. proveriti u svim veb pretrazivacima
