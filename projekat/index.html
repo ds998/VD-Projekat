@@ -236,6 +236,7 @@ body {font-size:16px;}
 
         let name_arr=["beginner","intermediate","advanced","power","ashtanga","hatha","low_intensity","medium_intensity","high_intensity","classic","stot","reformer"];
         let display_arr=["Beginner","Intermediate","Advanced","Power","Ashtanga","Hatha","Low Intensity","Medium Intensity","High Intensity","Klasični","Stot","Reformer"];
+        let img_arr=["core1","core2","core3","power","ashtanga","hatha","cardio1","cardio2","cardio3","classic","stot","reformer"];
         let tr=JSON.parse(localStorage.getItem("treninzi"));
         console.log(tr);
         for(let i=0;i<name_arr.length;i++){
@@ -247,9 +248,9 @@ body {font-size:16px;}
           }
         }
 
-      $("#first").html("<a href="+arr[0]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[0])]+"</h3></div></div>");
-      $("#second").html("<a href="+arr[1]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[1])]+"</h3></div></div>");
-      $("#third").html("<a href="+arr[2]+".html><img src='assets/placeholder.png' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[2])]+"</h3></div></div>");
+      $("#first").html("<a href="+arr[0]+".html><img src='assets/"+img_arr[name_arr.indexOf(arr[0])]+".jpg' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[0])]+"</h3></div></div>");
+      $("#second").html("<a href="+arr[1]+".html><img src='assets/"+img_arr[name_arr.indexOf(arr[1])]+".jpg' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[1])]+"</h3></div></div>");
+      $("#third").html("<a href="+arr[2]+".html><img src='assets/"+img_arr[name_arr.indexOf(arr[2])]+".jpg' style='width:100%;'></a><div class='new_grey'><div class='w3-container'><h3>"+display_arr[name_arr.indexOf(arr[2])]+"</h3></div></div>");
 
     });
     </script>

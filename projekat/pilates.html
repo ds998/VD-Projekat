@@ -130,24 +130,29 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
     <h1 class="w3-xxxlarge theme_text"><b>Pilates</b></h1>
     <hr style="width:50px;border:5px solid #328199" class="w3-round">
+    <div id="myBtnContainer">
+      <button class="btn active filter_btn" onclick="byname()">Sortiraj po imenu</button>
+      <button class="btn filter_btn" onclick="lasting()">Sortiraj po trajanju</button>
+      <button class="btn filter_btn" onclick="difficulty()">Sortiraj po težini</button>
+    </div>
     <div class="image-wrapper">
       
-      <a class ="a_img" href="treninzi.html"><img src="assets/classic.jpg"></a>
+      <a class ="a_img" href="classic.html"><img src="assets/classic.jpg"></a>
       <div class="new_grey">
         <div class="w3-container">
           <h3>Klasični</h3>
         </div>
       </div>
-      <a class ="a_img" href="nutricionista.html"><img src="assets/stot.jpg"></a>
-      <div class="new_grey">
-        <div class="w3-container">
-          <h3>Stot</h3>
-        </div>
-      </div>
-      <a class ="a_img" href="masaže.html"><img src="assets/reformer.jpg"></a>
+      <a class ="a_img" href="reformer.html"><img src="assets/reformer.jpg"></a>
       <div class="new_grey">
         <div class="w3-container">
           <h3>Reformer</h3>
+        </div>
+      </div>
+      <a class ="a_img" href="stot.html"><img src="assets/stot.jpg"></a>
+      <div class="new_grey">
+        <div class="w3-container">
+          <h3>Stot</h3>
         </div>
       </div>
     </div>
@@ -161,6 +166,33 @@ body {font-size:16px;}
 
 <script>
   // Script to open and close sidebar
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+     });
+  }
+  function byname(){
+    classic_str="<a class ='a_img' href='classic.html'><img src='assets/classic.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Classic</h3></div></div>";
+    stot_str="<a class ='a_img' href='stot.html'><img src='assets/stot.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Stot</h3></div></div>";
+    reformer_str="<a class ='a_img' href='reformer.html'><img src='assets/reformer.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Reformer</h3></div></div>";
+    $(".image-wrapper").html(classic_str+reformer_str+stot_str);
+  }
+  function lasting(){
+    classic_str="<a class ='a_img' href='classic.html'><img src='assets/classic.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Classic</h3></div></div>";
+    stot_str="<a class ='a_img' href='stot.html'><img src='assets/stot.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Stot</h3></div></div>";
+    reformer_str="<a class ='a_img' href='reformer.html'><img src='assets/reformer.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Reformer</h3></div></div>";
+    $(".image-wrapper").html(classic_str+reformer_str+stot_str);
+  }
+  function difficulty(){
+    classic_str="<a class ='a_img' href='classic.html'><img src='assets/classic.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Classic</h3></div></div>";
+    stot_str="<a class ='a_img' href='stot.html'><img src='assets/stot.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Stot</h3></div></div>";
+    reformer_str="<a class ='a_img' href='reformer.html'><img src='assets/reformer.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Reformer</h3></div></div>";
+    $(".image-wrapper").html(reformer_str+stot_str+classic_str);
+  }
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
