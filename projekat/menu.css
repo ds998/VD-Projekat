@@ -87,3 +87,12 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     padding-bottom: 50px;
 }
+
+.menu_header{
+    padding-top: 64px !important;
+    padding-bottom: 0 !important;
+}
+
+.current_page{
+    color: black !important;
+}
