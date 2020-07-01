@@ -17,7 +17,7 @@ body {font-size:16px;}
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding theme_class" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">x</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Fitnes<br>Centar</b></h3>
@@ -78,9 +78,9 @@ body {font-size:16px;}
                     
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#core">
                       <div class="card-body">
-                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Beginner</a>
-                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intermediate</a>
-                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advanced</a>
+                        <a href="beginner" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Beginner</a>
+                        <a href="intermediate" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intermediate</a>
+                        <a href="advanced" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advanced</a>
                       </div>
                     </div>
                   </div>
@@ -92,32 +92,31 @@ body {font-size:16px;}
                     
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#cardio">
                       <div class="card-body">
-                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Low Intensity</a>
-                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Medium Intensity</a>
-                        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">High Intensity</a>
+                        <a href="low_intensity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Low Intensity</a>
+                        <a href="medium_intensity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Medium Intensity</a>
+                        <a href="high_intensity" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">High Intensity</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nutricionista</a> 
-            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Masaže</a>
+            <a href="nutricionista.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nutricionista</a> 
+            <a href="masaza.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Masaže</a>
           </div>
         </div>
     </div>
     
 
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Zakazivanje Treninga</a> 
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Moj Nalog</a> 
+    <a href="zakazivanje_treninga1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Zakazivanje Treninga</a> 
+    <a href="nalog.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Moj Nalog</a> 
     <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">O nama</a>
   </div>
   
 </nav>
-
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+<header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding theme_class">
+  <a href="javascript:void(0)" class="w3-button theme_class w3-margin-right" onclick="w3_open()">☰</a>
   <span>Fitnes Centar</span>
 </header>
 
@@ -130,8 +129,8 @@ body {font-size:16px;}
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Hatha Yoga.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h1 class="w3-xxxlarge theme_text"><b>Hatha Yoga.</b></h1>
+    <hr style="width:50px;border:5px solid #328199" class="w3-round">
   </div>
   <p class = "opis">Kao najrasprostranjeniji vid joge u svetu Hatha se odnosi na praktikovanje joga položaja (asana), vežbi disanja (pranayama) i tehnika opuštanja. Pokreti su umerenog intenziteta, a cilj je dovesti u ravnotežu telo i duh, zbog čega je Hatha joga idealna za sve početnike u bavljenju jogom. Osim praktikovanja poza (asana), akcenat se stavlja i na disanje i meditaciju.</p>
   <p class = "trajanje">Trajanje treninga: 90 min</p>
@@ -139,19 +138,19 @@ body {font-size:16px;}
   <div class="w3-row-padding w3-grayscale galerija_slika">
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="John" style="width:100%">
+        <img src="assets/hatha.jpg" alt="John" style="width:100%;">
         
       </div>
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="Jane" style="width:100%">
+        <img src="assets/hatha2.jpg" alt="Jane" style="width:100%">
         
       </div>
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-        <img src="assets/placeholder.png" alt="Mike" style="width:100%">
+        <img src="assets/hatha3.jpg" alt="Mike" style="width:100%">
         
       </div>
     </div>

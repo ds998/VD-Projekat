@@ -56,7 +56,7 @@ nav::-webkit-scrollbar-track {
 }
   
 nav::-webkit-scrollbar-thumb {
-    background: rgb(4, 77, 4) !important;
+    background: #106883 !important;
     border-radius: 10px !important;
 }
 
@@ -71,4 +71,13 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: #d3d2d2 !important;
     border-radius: 10px !important;
+}
+
+.theme_class{
+    background-color:#328199 !important;
+    color: white !important;
+}
+
+.theme_text{
+    color: #328199 !important;
 }
