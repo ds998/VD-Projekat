@@ -159,10 +159,10 @@ body {font-size:16px;}
           let d = new Date(zak[name_arr[i]].datum);
           let t=new Date();
           if(d.getTime()-t.getTime()<0){
-            zak[s].datum=null;
-            zak[s].prisustvovano=1;
-            tre[s].broj_prijavljenih--;
-            tre[s].mesta[d]++;
+            zak[name_arr[i]].datum=null;
+            zak[name_arr[i]].prisustvovano=1;
+            tre[name_arr[i]].broj_prijavljenih--;
+            tre[name_arr[i]].mesta[d]++;
           }
           
         

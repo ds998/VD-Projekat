@@ -202,6 +202,26 @@ body {font-size:16px;}
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script>
     // Script to open and close sidebar
+    setInterval(check,600000);
+    function check(){
+      let zak=JSON.parse(localStorage.getItem('zakazivanja'));
+      let tre = JSON.parse(localStorage.getItem('treninzi'));
+      if(zak["classic"].datum!=null){
+        let d = new Date(zak["classic"].datum);
+        let t=new Date();
+        if(d.getTime()-t.getTime()<0){
+            zak["classic"].datum=null;
+            zak["classic"].prisustvovano=1;
+            tre["classic"].broj_prijavljenih--;
+            tre["classic"].mesta[d]++;
+            $(".form-group").css('display','block');
+        }
+          
+        
+      }
+      localStorage.setItem('zakazivanja',JSON.stringify(zak));
+      localStorage.setItem('treninzi',JSON.stringify(tre));
+    } 
     function w3_open() {
       document.getElementById("mySidebar").style.display = "block";
       document.getElementById("myOverlay").style.display = "block";
