@@ -3,7 +3,7 @@
 <title>Fitnes Centar - Core</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel = "stylesheet" href = "core.css">
+<link rel = "stylesheet" href = "usluge.css">
 <link rel="stylesheet" href="Menu.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
@@ -129,8 +129,18 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
     <h1 class="w3-xxxlarge theme_text"><b>Core</b></h1>
     <hr style="width:50px;border:5px solid #328199" class="w3-round">
+    <div id="myBtnContainer">
+      <button class="btn active filter_btn" onclick="byname()">Sortiraj po imenu</button>
+      <button class="btn filter_btn" onclick="lasting()">Sortiraj po trajanju</button>
+      <button class="btn filter_btn" onclick="difficulty()">Sortiraj po težini</button>
+    </div>
     <div class="image-wrapper">
-      
+      <a class ="a_img" href="advanced.html"><img src="assets/core3.jpg"></a>
+      <div class="new_grey">
+        <div class="w3-container">
+          <h3>Advanced</h3>
+        </div>
+      </div>
       <a class ="a_img" href="beginner.html"><img src="assets/core1.jpg"></a>
       <div class="new_grey">
         <div class="w3-container">
@@ -141,12 +151,6 @@ body {font-size:16px;}
       <div class="new_grey">
         <div class="w3-container">
           <h3>Intermediate</h3>
-        </div>
-      </div>
-      <a class ="a_img" href="advanced.html"><img src="assets/core3.jpg"></a>
-      <div class="new_grey">
-        <div class="w3-container">
-          <h3>Advanced</h3>
         </div>
       </div>
     </div>
@@ -160,6 +164,33 @@ body {font-size:16px;}
 
 <script>
   // Script to open and close sidebar
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+     });
+  }
+  function byname(){
+    beginner_str="<a class ='a_img' href='beginner.html'><img src='assets/core1.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Beginner</h3></div></div>";
+    intermediate_str="<a class ='a_img' href='intermediate.html'><img src='assets/core2.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Intermediate</h3></div></div>";
+    advanced_str="<a class ='a_img' href='advanced.html'><img src='assets/core3.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Advanced</h3></div></div>";
+    $(".image-wrapper").html(advanced_str+beginner_str+intermediate_str);
+  }
+  function lasting(){
+    beginner_str="<a class ='a_img' href='beginner.html'><img src='assets/core1.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Beginner</h3></div></div>";
+    intermediate_str="<a class ='a_img' href='intermediate.html'><img src='assets/core2.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Intermediate</h3></div></div>";
+    advanced_str="<a class ='a_img' href='advanced.html'><img src='assets/core3.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Advanced</h3></div></div>";
+    $(".image-wrapper").html(beginner_str+intermediate_str+advanced_str);
+  }
+  function difficulty(){
+    beginner_str="<a class ='a_img' href='beginner.html'><img src='assets/core1.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Beginner</h3></div></div>";
+    intermediate_str="<a class ='a_img' href='intermediate.html'><img src='assets/core2.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Intermediate</h3></div></div>";
+    advanced_str="<a class ='a_img' href='advanced.html'><img src='assets/core3.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Advanced</h3></div></div>";
+    $(".image-wrapper").html(beginner_str+intermediate_str+advanced_str);
+  }
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";

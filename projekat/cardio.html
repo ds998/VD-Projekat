@@ -3,7 +3,7 @@
 <title>Fitnes Centar - Cardio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel = "stylesheet" href = "cardio.css">
+<link rel = "stylesheet" href = "usluge.css">
 <link rel="stylesheet" href="Menu.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
@@ -129,8 +129,18 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
     <h1 class="w3-xxxlarge theme_text"><b>Cardio</b></h1>
     <hr style="width:50px;border:5px solid #328199" class="w3-round">
+    <div id="myBtnContainer">
+      <button class="btn active filter_btn" onclick="byname()">Sortiraj po imenu</button>
+      <button class="btn filter_btn" onclick="lasting()">Sortiraj po trajanju</button>
+      <button class="btn filter_btn" onclick="difficulty()">Sortiraj po težini</button>
+    </div>
     <div class="image-wrapper">
-      
+      <a class ="a_img" href="high_intensity.html"><img src="assets/cardio3.jpg"></a>
+      <div class="new_grey">
+        <div class="w3-container">
+          <h3>High Intensity</h3>
+        </div>
+      </div>
       <a class ="a_img" href="low_intensity.html"><img src="assets/cardio1.jpg"></a>
       <div class="new_grey">
         <div class="w3-container">
@@ -143,12 +153,7 @@ body {font-size:16px;}
           <h3>Medium Intensity</h3>
         </div>
       </div>
-      <a class ="a_img" href="high_intensity.html"><img src="assets/cardio3.jpg"></a>
-      <div class="new_grey">
-        <div class="w3-container">
-          <h3>High Intensity</h3>
-        </div>
-      </div>
+      
     </div>
   </div>
 
@@ -160,6 +165,33 @@ body {font-size:16px;}
 
 <script>
   // Script to open and close sidebar
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+     });
+  }
+  function byname(){
+    low_intensity_str="<a class ='a_img' href='low_intensity.html'><img src='assets/cardio1.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Low Intensity</h3></div></div>";
+    medium_intensity_str="<a class ='a_img' href='medium_intensity.html'><img src='assets/cardio2.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Medium Intensity</h3></div></div>";
+    high_intensity_str="<a class ='a_img' href='high_intensity.html'><img src='assets/cardio3.jpg'></a><div class='new_grey'><div class='w3-container'><h3>High Intensity</h3></div></div>";
+    $(".image-wrapper").html(high_intensity_str+low_intensity_str+medium_intensity_str);
+  }
+  function lasting(){
+    low_intensity_str="<a class ='a_img' href='low_intensity.html'><img src='assets/cardio1.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Low Intensity</h3></div></div>";
+    medium_intensity_str="<a class ='a_img' href='medium_intensity.html'><img src='assets/cardio2.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Medium Intensity</h3></div></div>";
+    high_intensity_str="<a class ='a_img' href='high_intensity.html'><img src='assets/cardio3.jpg'></a><div class='new_grey'><div class='w3-container'><h3>High Intensity</h3></div></div>";
+    $(".image-wrapper").html(low_intensity_str+medium_intensity_str+high_intensity_str);
+  }
+  function difficulty(){
+    low_intensity_str="<a class ='a_img' href='low_intensity.html'><img src='assets/cardio1.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Low Intensity</h3></div></div>";
+    medium_intensity_str="<a class ='a_img' href='medium_intensity.html'><img src='assets/cardio2.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Medium Intensity</h3></div></div>";
+    high_intensity_str="<a class ='a_img' href='high_intensity.html'><img src='assets/cardio3.jpg'></a><div class='new_grey'><div class='w3-container'><h3>High Intensity</h3></div></div>";
+    $(".image-wrapper").html(low_intensity_str+medium_intensity_str+high_intensity_str);
+  }
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";

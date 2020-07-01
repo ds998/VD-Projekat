@@ -129,21 +129,26 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
     <h1 class="w3-xxxlarge theme_text"><b>Yoga</b></h1>
     <hr style="width:50px;border:5px solid #328199" class="w3-round">
+    <div id="myBtnContainer">
+      <button class="btn active filter_btn" onclick="byname()">Sortiraj po imenu</button>
+      <button class="btn filter_btn" onclick="lasting()">Sortiraj po trajanju</button>
+      <button class="btn filter_btn" onclick="difficulty()">Sortiraj po težini</button>
+    </div>
     <div class="image-wrapper">
       
-      <a class ="a_img" href="treninzi.html"><img src="assets/ashtanga.jpg"></a>
+      <a class ="a_img" href="ashtanga.html"><img src="assets/ashtanga.jpg"></a>
       <div class="new_grey">
         <div class="w3-container">
           <h3>Ashtanga</h3>
         </div>
       </div>
-      <a class ="a_img" href="nutricionista.html"><img src="assets/hatha.jpg"></a>
+      <a class ="a_img" href="hatha.html"><img src="assets/hatha.jpg"></a>
       <div class="new_grey">
         <div class="w3-container">
           <h3>Hatha</h3>
         </div>
       </div>
-      <a class ="a_img" href="masaže.html"><img src="assets/power.jpg"></a>
+      <a class ="a_img" href="power.html"><img src="assets/power.jpg"></a>
       <div class="new_grey">
         <div class="w3-container">
           <h3>Power</h3>
@@ -160,6 +165,33 @@ body {font-size:16px;}
 
 <script>
   // Script to open and close sidebar
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+     });
+  }
+  function byname(){
+    ashtanga_str="<a class ='a_img' href='ashtanga.html'><img src='assets/ashtanga.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Ashtanga</h3></div></div>";
+    hatha_str="<a class ='a_img' href='hatha.html'><img src='assets/hatha.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Hatha</h3></div></div>";
+    power_str="<a class ='a_img' href='power.html'><img src='assets/power.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Power</h3></div></div>";
+    $(".image-wrapper").html(ashtanga_str+hatha_str+power_str);
+  }
+  function lasting(){
+    ashtanga_str="<a class ='a_img' href='ashtanga.html'><img src='assets/ashtanga.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Ashtanga</h3></div></div>";
+    hatha_str="<a class ='a_img' href='hatha.html'><img src='assets/hatha.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Hatha</h3></div></div>";
+    power_str="<a class ='a_img' href='power.html'><img src='assets/power.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Power</h3></div></div>";
+    $(".image-wrapper").html(power_str+hatha_str+ashtanga_str);
+  }
+  function difficulty(){
+    ashtanga_str="<a class ='a_img' href='ashtanga.html'><img src='assets/ashtanga.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Ashtanga</h3></div></div>";
+    hatha_str="<a class ='a_img' href='hatha.html'><img src='assets/hatha.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Hatha</h3></div></div>";
+    power_str="<a class ='a_img' href='power.html'><img src='assets/power.jpg'></a><div class='new_grey'><div class='w3-container'><h3>Power</h3></div></div>";
+    $(".image-wrapper").html(hatha_str+power_str+ashtanga_str);
+  }
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";

@@ -68,3 +68,24 @@ img{
 img:hover{
     opacity:0.5;
 }
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+  
+/* Add a dark background to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.filter_btn{
+    width: 100%;
+}
+
+.filter_btn:hover{
+    background-color: lightgrey;
+}
