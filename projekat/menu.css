@@ -81,3 +81,9 @@ body::-webkit-scrollbar-thumb {
 .theme_text{
     color: #328199 !important;
 }
+
+.iframe_container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
