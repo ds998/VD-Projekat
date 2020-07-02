@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Fitnes Centar - Advanced</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" href = "menu.css">
+<link rel = "stylesheet" href = "classic.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding theme_class" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">x</a>
+  <div class="w3-container" style="padding-bottom: 64px;">
+    <h3 class="menu_header"><b>Fitnes Centar</b></h3>
+    <img src="assets/self_improvement.png" style="padding-left:60px;">
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html"  onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Start Page</a> 
+    
+    <a href="usluge.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
+    <div id="accordion">
+      <div class="card">
+        <div class="arrow_class">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">▼</button>
+        </div>
+        
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <a href="treninzi.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Trainings</a>
+            <div class="card" id="treninzi">
+              <div class="arrow_subclass">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">▼</button>
+              </div>
+              
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#treninzi">
+                <div class="card-body">
+                  <a href="yoga.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Yoga</a>
+                  <div class="card" id="yoga">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">▼</button>
+                    </div>
+                    
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#yoga">
+                      <div class="card-body">
+                        <a href="power.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Power Yoga</a>
+                        <a href="ashtanga.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ashtanga Yoga</a>
+                        <a href="hatha.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hatha Yoga</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="pilates.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pilates</a>
+                  <div class="card" id="pilates">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">▼</button>
+                    </div>
+                    
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#pilates">
+                      <div class="card-body">
+                        <a href="classic.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Classic Pilates</a>
+                        <a href="stot.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Stott Pilates</a>
+                        <a href="reformer.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Reformer Pilates</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="core.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Core</a>
+                  <div class="card" id="core">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">▼</button>
+                    </div>
+                    
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#core">
+                      <div class="card-body">
+                        <a href="beginner.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Beginner</a>
+                        <a href="intermediate.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intermediate</a>
+                        <a href="advanced.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white current_page">Advanced</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="cardio.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cardio</a>
+                  <div class="card" id="cardio">
+                    <div class="arrow_subclass2">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">▼</button>
+                    </div>
+                    
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#cardio">
+                      <div class="card-body">
+                        <a href="low_intensity.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Low Intensity</a>
+                        <a href="medium_intensity.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Medium Intensity</a>
+                        <a href="high_intensity.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">High Intensity</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="nutricionista.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nutritionist</a> 
+            <a href="masaza.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Massages</a>
+          </div>
+        </div>
+    </div>
+    
+
+    <a href="zakazivanje_treninga1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Training Appointment</a> 
+    <a href="nalog.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">My Account</a> 
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a>
+  </div>
+  
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding theme_class">
+  <a href="javascript:void(0)" class="w3-button theme_class w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Fitnes Centar<img src="assets/self_improvement.png" style="padding-left:30px"></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main container" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Fitnes Centar</b></h1>
+    <h1 class="w3-xxxlarge theme_text"><b>Advanced</b></h1>
+    <hr style="width:50px;border:5px solid #328199" class="w3-round">
+  </div>
+  
+  <p class = "opis">Advanced core is a type of core training for people already experienced in core training. The goal of this training program is to master the well known exercises and train at a higher level. The trainer's job is to demonstrate the correct way of performing the exercises at the maximum level of intensity, as well as to assist you if needed.</p>
+  <p class = "trajanje">Trajanje treninga: 180 min</p>
+  <p class = "nivo">Nivo težine: 5</p>
+  <div class="w3-row-padding w3-grayscale galerija_slika">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/core3.jpg" alt="John" style="width:100%">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/core32.jpg" alt="Jane" style="width:100%">
+        
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="assets/core33.jpg" alt="Mike" style="width:100%">
+        
+      </div>
+    </div>
+  </div>
+  <div class="iframe_container">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MJATGwIXkH4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="komentari">
+    
+    <div class="row">
+      <div class="col w3-light-grey">
+        <div id = "pret_ocene">Dosadašnja ocena</div>
+        <div id = "pret_komentari">Prethodni komentari</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <form name="comment_form" method="POST" onsubmit="submit_opinion()">
+    <p>Ocena:</p>
+    <div class="row">
+      <div class="col-12">
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1">1 star</label>
+        </div>
+      </div>
+    </div>
+    <label for="comment">Komentar:</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Dodajte ocenu i/ili komentar</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-20" style="margin-top:75px;padding-left:30%"><a href="https://www.twitter.com" style="padding-top: 10px; padding-right: 10px;" align="center"><img src="assets/twitter.png"></a><a href="https://www.facebook.com" style="padding-top: 10px; padding-right: 10px;" align="center"><img src="assets/facebook.png"></a><a href="https://www.instagram.com" style="padding-top: 10px; padding-right: 10px;" align="center"><img src="assets/instagram.png"></a></div>
+<div class="w3-light-grey w3-container w3-padding-32" style="padding-right:58px"><p class="w3-right" style="padding-right: 100px;" align="center">„Copyright 2020, imena autora, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu“.</p></div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script>
+    // Script to open and close sidebar
+
+    setInterval(check,600000);
+    function check(){
+      let zak=JSON.parse(localStorage.getItem('zakazivanja'));
+      let tre = JSON.parse(localStorage.getItem('treninzi'));
+      if(zak["advanced"].datum!=null){
+        let d = new Date(zak["advanced"].datum);
+        let t=new Date();
+        if(d.getTime()-t.getTime()<0){
+            zak["advanced"].datum=null;
+            zak["advanced"].prisustvovano=1;
+            tre["advanced"].broj_prijavljenih--;
+            tre["advanced"].mesta[d]++;
+            $(".form-group").css('display','block');
+        }
+        
+        
+      }
+      localStorage.setItem('zakazivanja',JSON.stringify(zak));
+      localStorage.setItem('treninzi',JSON.stringify(tre));
+    }
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    $(document).ready(function(){
+      var zakazivanja=JSON.parse(localStorage.getItem('zakazivanja'));
+      if(zakazivanja["advanced"].prisustvovano){
+        $(".form-group").css('display','block');
+      }
+      //console.log(JSON.parse(localStorage.getItem("treninzi")));
+    });
+
+    $(document).ready(function(){
+      let podaci=JSON.parse(localStorage.getItem("treninzi"))["advanced"];
+      if(podaci.broj_ocena==0){
+        $("#pret_ocene").html("Dosadašnja ocena: neocenjeno");
+      }else{
+        $("#pret_ocene").html("Dosadašnja ocena: "+podaci.ocena);
+      }
+      let htm="";
+      if(podaci.comments.length!=0)htm+="</br>";
+      for(let i=0;i<podaci.comments.length;i++){
+        htm+=podaci.comments[i]+"</br>";
+      }
+      $("#pret_komentari").html("Prethodni komentari:"+htm);
+
+    });
+    function submit_opinion(){
+      var trainings=JSON.parse(localStorage.getItem("treninzi"));
+      var data=trainings["advanced"];
+      var oc=parseInt(document.comment_form.rate.value);
+      if(!isNaN(oc)){
+        console.log(data.ocena*data.broj_ocena+oc);
+        data.ocena=((data.ocena*data.broj_ocena)+oc)/(data.broj_ocena+1);
+        console.log(data.ocena);
+        data.broj_ocena+=1;
+        document.getElementById("pret_ocene").innerHTML="Dosadašnja ocena: "+data.ocena;
+      }
+    
+      if(document.comment_form.comment.value){
+        data.comments.push(document.comment_form.comment.value);
+        document.getElementById("pret_komentari").innerHTML+=document.comment_form.comment.value+"</br>";
+      }
+      trainings["advanced"]=data;
+    
+    
+      localStorage.setItem("treninzi",JSON.stringify(trainings));
+      console.log(JSON.parse(localStorage.getItem("treninzi")));
+      return false;
+    
+    }
+  </script>
+</body>
+</html>
