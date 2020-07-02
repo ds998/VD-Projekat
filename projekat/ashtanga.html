@@ -243,7 +243,8 @@ body {font-size:16px;}
       document.getElementById("img01").src = element.src;
       document.getElementById("modal01").style.display = "block";
       var captionText = document.getElementById("caption");
-      captionText.innerHTML = eleme
+      captionText.innerHTML = element.alt;
+    }
   
       $(document).ready(function(){
         var zakazivanja=JSON.parse(localStorage.getItem('zakazivanja'));
