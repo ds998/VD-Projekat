@@ -112,6 +112,7 @@ body {font-size:16px;}
     <a href="zakazivanje_treninga1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Zakazivanje Treninga</a> 
     <a href="nalog.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Moj Nalog</a> 
     <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">O nama</a>
+    <a href="power_eng.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Engleski</a>
   </div>
   
 </nav>
@@ -165,7 +166,7 @@ body {font-size:16px;}
     
     <div class="row">
       <div class="col w3-light-grey">
-        <div id = "pret_ocene">Dosadasnja ocena</div>
+        <div id = "pret_ocene">Dosadašnja ocena</div>
         <div id = "pret_komentari">Prethodni komentari</div>
       </div>
     </div>
@@ -201,25 +202,8 @@ body {font-size:16px;}
 </div>
 
 <!-- W3.CSS Container -->
-
-  <script>
-  // Script to open and close sidebar
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-  }
-   
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
   
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.</script>
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -260,7 +244,9 @@ body {font-size:16px;}
       document.getElementById("img01").src = element.src;
       document.getElementById("modal01").style.display = "block";
       var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.
+      captionText.innerHTML = element.alt;
+    }
+
       $(document).ready(function(){
         var zakazivanja=JSON.parse(localStorage.getItem('zakazivanja'));
         if(zakazivanja["power"].prisustvovano){
