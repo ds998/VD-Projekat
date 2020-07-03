@@ -223,6 +223,23 @@ body {font-size:16px;}
           check=false;
           str+="The telephone number is in the wrong format!";
       }
+
+      let date_regex=/^((\d){4})(-)(((0)([1-9]))|((1)([0-2])))(-)(((0)([1-9]))|(([1-2])([0-9]))|(((3))([0-1])))$/g;
+      
+      if(!date_regex.test(date)){
+          check=false;
+          str+="The date is in the wrong format!";
+      }
+      else{
+        let dates=date.split("-");
+        console.log(dates);
+        let d=new Date();
+        let dfg=new Date(parseInt(dates[0]),parseInt(dates[1])-1,parseInt(dates[2]));
+        if(dfg.getTime()-d.getTime()<0){
+          check=false;
+          str+="That date has passed!";
+        }
+      }
   
       let problem_regex=/^([\w\s.\-_\!?,;ščćžđŠČĆŽĐ]){10,}$/g;
       if(!problem_regex.test(problem)){
