@@ -242,12 +242,13 @@ body {font-size:16px;}
     var zakazivanje = JSON.parse(localStorage.getItem('zakazivanja'));
     var appointment = zakazivanje[ime];
     var termin = new Date();
-    while(termin.getDay()!=niz_dana.indexOf(dan)){
+
+    while(termin.getDay()!=(niz_dana.indexOf(dan)+1)){
       termin.setDate(termin.getDate() + 1);
     }
-    termin.setHours(17);
-    termin.setMinutes(0);
-    termin.setSeconds(0);
+    termin.setUTCHours(17);
+    termin.setUTCMinutes(0);
+    termin.setUTCSeconds(0);
     appointment.datum = termin;
     nedeljni_niz[niz_dana.indexOf(dan)]--;
     podaci.mesta = nedeljni_niz;

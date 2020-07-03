@@ -231,7 +231,7 @@ body {font-size:16px;}
         let d = new Date(zak[s].datum).getDay();
         zak[s].datum=null;
         tre[s].broj_prijavljenih--;
-        tre[s].mesta[d]++;
+        tre[s].mesta[d-1]++;
         localStorage.setItem('zakazivanja',JSON.stringify(zak));
         localStorage.setItem('treninzi',JSON.stringify(tre));
       }
